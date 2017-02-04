@@ -14,12 +14,12 @@
         }
     ],
     "require": {
-        "illuminate/container": "5.0.*|5.1.*",
-        "illuminate/support": "5.0.*|5.1.*",
-        "illuminate/cache": "5.0.*|5.1.*",
-        "illuminate/config": "5.0.*|5.1.*",
-        "illuminate/http": "5.0.*|5.1.*",
-        "illuminate/contracts": "5.0.*|5.1.*",
+        "illuminate/container": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "illuminate/cache": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "illuminate/config": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "illuminate/http": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "illuminate/contracts": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
         "mrclay/minify": "^2.2"
     },
     "require-dev": {
