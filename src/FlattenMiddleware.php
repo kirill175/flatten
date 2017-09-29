@@ -2,10 +2,11 @@
 namespace Flatten;
 
 use Closure;
-use Illuminate\Contracts\Routing\Middleware;
-use Illuminate\Contracts\Routing\TerminableMiddleware;
+use Symfony\Component\HttpKernel\TerminableInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class FlattenMiddleware implements TerminableMiddleware
+class FlattenMiddleware implements TerminableInterface
 {
     /**
      * @var Context
@@ -51,10 +52,9 @@ class FlattenMiddleware implements TerminableMiddleware
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \Illuminate\Http\Response $response
+     * @inheritdoc
      */
-    public function terminate($request, $response)
+    public function terminate(Request $request, Response $response)
     {
         if ($this->context->shouldRun()) {
             $this->events->onApplicationDone($response);
